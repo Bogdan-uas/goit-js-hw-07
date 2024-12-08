@@ -41,6 +41,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  position: relative;
 }
 
 #categories {
@@ -196,6 +197,14 @@ body {
   margin-left: 16px;
 }
 
+.pcolor {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
 .color {
     font-weight: 400;
     font-size: 16px;
@@ -245,7 +254,7 @@ body {
 .controls-input {
     border: 1px solid #808080;
     border-radius: 8px;
-    padding: 8px 72px;
+    padding: 8px;
     width: 150px;
     height: 40px;
 }
@@ -296,4 +305,10 @@ body {
 .destroy-button:focus {
   background-color: #ff7070;
   cursor: pointer;
+}
+
+#boxes {
+  position: absolute;
+  left: 0%;
+  top: 100%;
 }
