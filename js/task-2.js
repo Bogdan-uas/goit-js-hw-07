@@ -24,3 +24,21 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const gallery = document.querySelector('.gallery')
+gallery.style.display = "flex"
+gallery.style.flexWrap = "wrap"
+gallery.style.justifyContent = "center"
+gallery.style.gap = "24px"
+gallery.style.listStyle = "none"
+gallery.style.maxWidth = "1128px"
+
+gallery.insertAdjacentHTML(
+  "beforeend",
+  images
+    .map(({ url, alt }) => 
+      `<li><img class="image" src=${url} alt=${alt} style="max-width: calc(360px - 48px); min-height: 300px; object-fit: cover"/></li>`
+  )
+  
+  .join("")
+)
